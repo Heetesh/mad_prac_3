@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!--Image view that covers all the images-->
+    <ImageView
+        android:id="@+id/i_view_covers_all"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="Image that covers the whole grid"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/i_view_top_left"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="The top left image of the grid cell"
+        app:layout_constraintBottom_toTopOf="@id/i_view_bottom_left"
+        app:layout_constraintEnd_toStartOf="@+id/i_view_top_right"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/i_view_top_right"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="The top right image of the grid cell"
+        app:layout_constraintBottom_toTopOf="@id/i_view_bottom_right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toEndOf="@id/i_view_top_left"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/i_view_bottom_left"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="The bottom left image of the grid cell"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/i_view_bottom_right"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/i_view_top_right"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/i_view_bottom_right"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="The bottom right image of the grid cell"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toEndOf="@id/i_view_bottom_left"
+        app:layout_constraintTop_toBottomOf="@id/i_view_top_right"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
